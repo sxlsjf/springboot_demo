@@ -1,0 +1,42 @@
+server:
+  port: 8080
+  session-timeout: 30
+  tomcat.max-threads: 0
+  tomcat.uri-encoding: UTF-8
+
+
+
+spring:
+   datasource:
+      type: com.zaxxer.hikari.HikariDataSource
+      url: jdbc:mysql://localhost:3306/test?characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: root
+
+
+
+#数据源配置 这里是c3p0数据源配置 注意冒号后面要有空格
+    # Spring:
+  #  datasource:
+    #    driverClass: com.mysql.jdbc.Driver
+    #   jdbcUrl:  jdbc:mysql://localhost:3306/test?characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
+    #    user: root
+    #    password: root
+    #    maxIdleTime: 60
+    #   initialPoolSize: 8
+    #    minPoolSize: 5
+    #  maxPoolSize: 10
+    #     acquireIncrement: 11
+    #    acquireRetryAttempts: 7
+    # 使用c3p0数据源
+   # type: com.mchange.v2.c3p0.ComboPooledDataSource
+
+# MyBatis
+##mybatis:
+  # 配置类型别名
+  #typeAliasesPackage: model
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  #mapperLocations: classpath:mapper/*.xml
+  # 加载全局的配置文件
+ # configLocation: classpath:mybatis-config.xml
